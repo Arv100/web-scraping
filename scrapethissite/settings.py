@@ -15,14 +15,14 @@ NEWSPIDER_MODULE = "scrapethissite.spiders"
 # MONGO_SETTING
 MONGO_HOST = "localhost"
 MONGO_PORT = 27017
-MONGO_DB = "scrape"
-MONGO_COLLECTION = "scrape_this_site"
+MONGO_DB = "scrape" #your_mongo_database
+MONGO_COLLECTION = "scrape_this_site" #your_mongo_collection
 
 #MYSQL_SETTING
 MYSQL_HOST = 'localhost'
-MYSQL_USER = 'root'
-MYSQL_PASS = 'TOOR'
-MYSQL_DB = 'scrape'
+MYSQL_USER = 'root' #your_mysql_username
+MYSQL_PASS = 'TOOR' #your_mysql_password
+MYSQL_DB = 'scrape' #your_mysql_database
 MYSQL_PORT = 3306
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -76,8 +76,8 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    "scrapethissite.pipelines.ScrapethissitePipeline": 300,
-   # "scrapethissite.pipelines.save_to_mysql": 400,
-   # "scrapethissite.pipelines.save_to_mongodb": 500
+   "scrapethissite.pipelines.save_to_mysql": 400,
+   "scrapethissite.pipelines.save_to_mongodb": 500
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
